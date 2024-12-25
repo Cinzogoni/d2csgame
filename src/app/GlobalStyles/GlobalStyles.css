@@ -3,11 +3,20 @@
   --main-text-font: "Poppins", sans-serif;
 
   /* Text Color */
-  --primary-text-color: rgba(255, 255, 255, 0.8);
+  --light-mode-text-color: rgba(0, 0, 0, 0.8);
+  --dark-mode-text-color: rgba(255, 255, 255, 0.8);
 
   /* Colors */
+  --primary-light-mode-bg: rgba(255, 255, 255, 1);
+  --primary-dark-mode-bg: rgba(0, 0, 0, 1);
+  --second-light-mode-bg: rgb(220, 220, 220, 1);
+  --second-dark-mode-bg: rgba(27, 27, 27, 1);
+  --scrollbar-light-mode: rgba(150, 150, 150, 1);
+  --scrollbar-dark-mode: ;
 
   /* Border */
+  --light-mode-gap: 2px solid rgba(27, 27, 27, 0.5);
+  --dark-mode-gap: 2px solid rgb(220, 220, 220, 0.5);
 
   /* Border-Radius */
 
@@ -19,9 +28,11 @@ body {
   font-family: var(--main-text-font);
   user-select: none;
   max-width: 100vw;
+  height: 100vh;
   font-size: 62.5%;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
+  background-color: rgb(220, 220, 220, 1);
 }
 
 * {

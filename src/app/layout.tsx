@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
+
+import styles from "./layout.module.scss";
+import styles1 from "../app/GridSystem/GridSystem.module.scss";
+import classNames from "classnames/bind";
+const cx = classNames.bind(styles);
+const cx1 = classNames.bind(styles1);
+
 import GlobalStyles from "./GlobalStyles/GlobalStyles";
+import GridSystem from "./GridSystem/GridSystem";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "d2csgame",
@@ -30,7 +40,15 @@ export default function RootLayout({
   return (
     <GlobalStyles>
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          <div className={cx("container")}>
+            <Header />
+            <GridSystem gridClass={cx1("grid")} wideClass={cx1("wide")}>
+              {children}
+            </GridSystem>
+            <Footer />
+          </div>
+        </body>
       </html>
     </GlobalStyles>
   );
