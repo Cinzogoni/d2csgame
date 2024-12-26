@@ -1,11 +1,15 @@
-import styles from "./page.module.scss";
+import styles from "../app/styles/page.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
+
+import Contact from "./components/Contact/Contacts";
+import News from "./components/News/News";
 
 function Home() {
   return (
     <div className={cx("wrapper")}>
-      <h1 className={cx("title")}>Home Page</h1>
+      <Contact />
+      <News />
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.billboard {
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+
+.news {
+  width: 18.8216%;
+  height: 100%;
+  margin-right: 24px;
+  background-color: var(--frame-background-color);
+  box-shadow: var(--frame-shadow);
+  border: var(--primary-separation);
+}
+
+.banners {
+  width: 81.1784%;
+  height: 100%;
+  background-color: var(--frame-background-color);
+  box-shadow: var(--frame-shadow);
+  border: var(--primary-separation);
+}
+
+@media (max-width: 630px) {
+  .billboard {
+    flex-direction: column;
+  }
+
+  .news {
+    width: 100%;
+    margin: 24px 0;
+  }
+
+  .banners {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}

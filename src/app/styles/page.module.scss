@@ -1,9 +1,11 @@
 .wrapper {
   width: 100%;
   height: 100%;
-  background-color: var(--primary-light-mode-bg);
-  border-left: var(--light-mode-gap);
-  border-right: var(--light-mode-gap);
+  border-left: var(--primary-separation);
+  border-right: var(--primary-separation);
+  box-shadow: 0 7px 10px rgba(255, 255, 255, 0.5);
+  padding: 24px;
+  min-width: 220px;
 
   overflow-y: auto;
   overflow-x: hidden;
@@ -24,12 +26,7 @@
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollbar-light-mode);
+    background: var(--scrollbar-color);
     border-radius: 50px;
   }
-}
-
-.title {
-  color: var(--light-mode-text-color);
-  font-size: 4.8rem;
 }

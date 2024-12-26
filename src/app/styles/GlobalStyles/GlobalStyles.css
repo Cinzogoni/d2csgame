@@ -1,38 +1,35 @@
 :root {
-  /* Fonts */
   --main-text-font: "Poppins", sans-serif;
+  --text-color: #34495e;
+  --primary-separation: 1px solid rgb(0, 0, 0, 0.3);
+  --frame-background-color: rgba(255, 255, 255, 0.7);
+  --frame-shadow: 0 0 2px #999999;
+  --scrollbar-color: rgba(100, 100, 100, 1);
 
-  /* Text Color */
-  --light-mode-text-color: rgba(0, 0, 0, 0.8);
-  --dark-mode-text-color: rgba(255, 255, 255, 0.8);
+  /* Dark Mode */
+  --primary-dark-mode-bg: linear-gradient(180deg, #000000, #34495e, #2c3e50);
 
-  /* Colors */
-  --primary-light-mode-bg: rgba(255, 255, 255, 1);
-  --primary-dark-mode-bg: rgba(0, 0, 0, 1);
-  --second-light-mode-bg: rgb(220, 220, 220, 1);
-  --second-dark-mode-bg: rgba(27, 27, 27, 1);
-  --scrollbar-light-mode: rgba(150, 150, 150, 1);
-  --scrollbar-dark-mode: ;
-
-  /* Border */
-  --light-mode-gap: 2px solid rgba(27, 27, 27, 0.5);
-  --dark-mode-gap: 2px solid rgb(220, 220, 220, 0.5);
-
-  /* Border-Radius */
-
-  /* Shadow */
+  /* Light Mode */
+  --primary-light-mode-bg: #e8e8e8;
 }
 
 html,
 body {
   font-family: var(--main-text-font);
-  user-select: none;
+  background: var(--primary-dark-mode-bg);
+  color: var(--text-color);
   max-width: 100vw;
   height: 100vh;
   font-size: 62.5%;
+  user-select: none;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
-  background-color: rgb(220, 220, 220, 1);
+}
+
+[data-theme="light"] body,
+html {
+  background: var(--primary-light-mode-bg);
+  color: var(--text-color);
 }
 
 * {
@@ -48,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary-text-color);
+  color: inherit;
   text-decoration: none;
 }
 
@@ -56,13 +53,13 @@ button,
 input {
   outline: none;
   border: none;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 
 a {
   font-style: normal;
   text-decoration: none;
-  color: var(--1st-text-color);
+  color: inherit;
 }
 
 @font-face {
