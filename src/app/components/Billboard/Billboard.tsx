@@ -17,7 +17,7 @@ function Billboard() {
       </article>
       <aside className={cx("banners")}>
         <div className={cx("banners-frame")}>
-          <div className={cx("banners-both-sides")}>
+          <div className={cx("banners-both-sides-left")}>
             <Link href="/" className={cx("banners-box")}></Link>
             <Link href="/" className={cx("banners-box")}></Link>
             <Link href="/" className={cx("banners-box")}></Link>
@@ -34,11 +34,11 @@ function Billboard() {
             </div>
           </Link>
 
-          <div className={cx("banners-both-sides")}>
-            <Link href="/" className={cx("banners-box")}></Link>
-            <Link href="/" className={cx("banners-box")}></Link>
-            <Link href="/" className={cx("banners-box")}></Link>
-            <Link href="/" className={cx("banners-box")}></Link>
+          <div className={cx("banners-both-sides-right")}>
+            <Link href="/" className={cx("banners-box-1")}></Link>
+            <Link href="/" className={cx("banners-box-1")}></Link>
+            <Link href="/" className={cx("banners-box-1")}></Link>
+            <Link href="/" className={cx("banners-box-1")}></Link>
           </div>
         </div>
       </aside>

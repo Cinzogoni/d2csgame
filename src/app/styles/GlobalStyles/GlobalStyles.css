@@ -10,6 +10,7 @@
   --frame-shadow: 0 0 2px #999999;
   --banners-corner-frame: polygon(97% 0%, 215% 350%, -38% 50%, 0% 0%);
   --element-corner-frame: polygon(90% 0%, 215% 350%, -25% 50%, 0% 0%);
+  --element-corner-radius: 12px;
 
   /* Dark Mode */
   --primary-dark-mode-bg: linear-gradient(180deg, #000000, #34495e, #2c3e50);

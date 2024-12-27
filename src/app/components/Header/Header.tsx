@@ -5,7 +5,6 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 import { useTheme } from "src/app/context/ThemeContext";
-import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -15,8 +14,6 @@ function Header() {
       <button onClick={toggleTheme}>
         {theme === "dark" ? "light" : "dark"}
       </button>
-
-      <LanguageSwitcher />
     </header>
   );
 }

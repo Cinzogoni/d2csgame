@@ -36,6 +36,8 @@
   background-color: var(--element-background-color);
   border: var(--primary-separation);
   clip-path: var(--element-corner-frame);
+  border-top-left-radius: var(--element-corner-radius);
+  border-bottom-right-radius: var(--element-corner-radius);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +45,7 @@
 
 .banners {
   width: 74.49248%;
-  height: 100%;
+  // height: 100%;
   padding: 6px;
   box-shadow: var(--frame-shadow);
   background-color: var(--frame-background-color);
@@ -55,18 +57,44 @@
   background-color: var(--element-background-color);
   border: var(--primary-separation);
   clip-path: var(--banners-corner-frame);
+  border-top-left-radius: var(--element-corner-radius);
+  border-bottom-right-radius: var(--element-corner-radius);
   display: flex;
   justify-content: space-between;
 }
 
-.banners-both-sides {
+.banners-both-sides-left,
+.banners-both-sides-right {
   width: 22.46336%;
   height: 100%;
   border: var(--primary-separation);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.banners-both-sides-left {
+  border-top-left-radius: var(--element-corner-radius);
+}
+
+.banners-both-sides-right {
+  border-bottom-right-radius: var(--element-corner-radius);
+}
+
+.banners-box,
+.banners-box-1 {
+  width: 100%;
+  height: 116px;
+  border-bottom: var(--primary-separation);
+  background-color: var(--element-background-color);
+}
+
+.banners-box:first-child {
+  border-top-left-radius: var(--element-corner-radius);
+}
+
+.banners-box-1:last-child {
+  border-bottom-right-radius: var(--element-corner-radius);
 }
 
 .banners-center {
@@ -86,17 +114,11 @@
   object-fit: cover;
 }
 
-.banners-box {
-  width: 100%;
-  height: 116px;
-  border-bottom: var(--primary-separation);
-  background-color: var(--element-background-color);
-}
-
 @media (max-width: 630px) {
   .billboard {
+    width: 100%;
+    // height: 100%;
     flex-direction: column;
-    height: unset;
   }
 
   .news {
@@ -111,6 +133,7 @@
 
   .new {
     width: 32%;
+    margin-bottom: 6px;
   }
 
   .banners {
@@ -120,6 +143,7 @@
 
   .banners-frame {
     width: 100%;
+    height: 100%;
     flex-direction: column;
   }
 
@@ -135,12 +159,24 @@
     height: 316px;
   }
 
-  .banners-both-sides {
+  .banners-both-sides-left,
+  .banners-both-sides-right {
     width: 100%;
-    height: 464px;
+    height: 100%;
   }
 
-  .banners-box {
+  .banners-box,
+  .banners-box-1 {
     height: 109px;
+  }
+
+  .banners-box:nth-child(2),
+  .banners-box-1:nth-child(2) {
+    margin: 6px 0;
+  }
+
+  .banners-box:nth-child(3),
+  .banners-box-1:nth-child(3) {
+    margin-bottom: 6px;
   }
 }
