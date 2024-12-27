@@ -1,0 +1,146 @@
+.billboard {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news {
+  width: 23.2%;
+  height: 100%;
+  padding: 0 6px;
+  box-shadow: var(--frame-shadow);
+  border: var(--primary-separation);
+  background-color: var(--frame-background-color);
+}
+
+.news-title {
+  height: 31px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.news-frame {
+  width: 100%;
+  height: 461px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.new {
+  width: 100%;
+  height: 147.66667px;
+  background-color: var(--element-background-color);
+  border: var(--primary-separation);
+  clip-path: var(--element-corner-frame);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banners {
+  width: 74.49248%;
+  height: 100%;
+  padding: 6px;
+  box-shadow: var(--frame-shadow);
+  background-color: var(--frame-background-color);
+}
+
+.banners-frame {
+  width: 100%;
+  height: 100%;
+  background-color: var(--element-background-color);
+  border: var(--primary-separation);
+  clip-path: var(--banners-corner-frame);
+  display: flex;
+  justify-content: space-between;
+}
+
+.banners-both-sides {
+  width: 22.46336%;
+  height: 100%;
+  border: var(--primary-separation);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banners-center {
+  width: 53.76499%;
+  height: 100%;
+  border: var(--primary-separation);
+}
+
+.banners-center-box {
+  width: 100%;
+  height: 100%;
+}
+
+.image-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banners-box {
+  width: 100%;
+  height: 116px;
+  border-bottom: var(--primary-separation);
+  background-color: var(--element-background-color);
+}
+
+@media (max-width: 630px) {
+  .billboard {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .news {
+    width: 100%;
+    height: 185px;
+  }
+
+  .news-frame {
+    height: unset;
+    flex-direction: row;
+  }
+
+  .new {
+    width: 32%;
+  }
+
+  .banners {
+    width: 100%;
+    margin: 12px 0;
+  }
+
+  .banners-frame {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .banners-center {
+    width: 100%;
+    height: 100%;
+    margin: 6px 0;
+    border: unset;
+  }
+
+  .banners-center-box {
+    width: 100%;
+    height: 316px;
+  }
+
+  .banners-both-sides {
+    width: 100%;
+    height: 464px;
+  }
+
+  .banners-box {
+    height: 109px;
+  }
+}

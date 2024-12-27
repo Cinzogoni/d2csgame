@@ -3,14 +3,16 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 import Contact from "./components/Contact/Contacts";
-import News from "./components/News/News";
+import Billboard from "./components/Billboard/Billboard";
 
 function Home() {
   return (
-    <div className={cx("wrapper")}>
-      <Contact />
-      <News />
-    </div>
+    <main className={cx("wrapper")}>
+      <div className={cx("container")}>
+        <Contact />
+        <Billboard />
+      </div>
+    </main>
   );
 }
 
