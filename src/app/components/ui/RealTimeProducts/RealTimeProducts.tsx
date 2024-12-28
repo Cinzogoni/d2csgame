@@ -1,4 +1,4 @@
-import styles from "../RealTimeProduct/RealTimeProduct.module.scss";
+import styles from "../RealTimeProducts/RealTimeProducts.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
@@ -7,7 +7,7 @@ import GridSystem from "src/app/[locale]/styles/GridSystem/GridSystem";
 import { Link } from "src/i18n/routing";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
-function RealTimeProduct() {
+function RealTimeProducts() {
   const products = Array.from({ length: 10 }, (_, index) => ({
     id: index + 1,
     name: `Product ${index + 1}`,
@@ -16,7 +16,7 @@ function RealTimeProduct() {
   return (
     <div className={cx("wrapper")}>
       <button className={cx("view-all")}>
-        <Link href="/realtimeProduct" className={cx("link")}>
+        <Link href="/RealTimeProducts" className={cx("link")}>
           <h4
             style={{
               fontWeight: "600",
@@ -61,4 +61,4 @@ function RealTimeProduct() {
   );
 }
 
-export default RealTimeProduct;
+export default RealTimeProducts;

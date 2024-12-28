@@ -23,7 +23,7 @@ export const routing = defineRouting({
       en: "/payment",
       ru: "/оплата",
     },
-    "/realtimeProduct": {
+    "/RealTimeProducts": {
       vi: "/vua-cap-nhat",
       en: "/realtime-updated",
       ru: "/недавно-обновлено",

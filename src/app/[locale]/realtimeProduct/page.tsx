@@ -1,5 +1,5 @@
-function RealTimeProductPage() {
+function RealTimeProductsPage() {
   return;
 }
 
-export default RealTimeProductPage;
+export default RealTimeProductsPage;

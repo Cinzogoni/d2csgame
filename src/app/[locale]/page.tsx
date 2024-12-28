@@ -6,7 +6,7 @@ import { getTranslations } from "next-intl/server";
 
 import Contact from "../components/ui/Contact/Contacts";
 import Billboard from "../components/ui/Billboard/Billboard";
-import RealTimeProduct from "../components/ui/RealTimeProduct/RealTimeProduct";
+import RealTimeProducts from "../components/ui/RealTimeProducts/RealTimeProducts";
 import GridSystem from "./styles/GridSystem/GridSystem";
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
       <GridSystem gridClass={cx("grid")} wideClass={cx("wide")}>
         <Contact />
         <Billboard />
-        <RealTimeProduct />
+        <RealTimeProducts />
       </GridSystem>
     </main>
   );
