@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
 
-import styles from "../app/styles/layout.module.scss";
-import styles1 from "../app/styles/GridSystem/GridSystem.module.scss";
+import styles from "../[locale]/styles/layout.module.scss";
+import styles1 from "../[locale]/styles/GridSystem/GridSystem.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 const cx1 = classNames.bind(styles1);
 
 import GlobalStyles from "./styles/GlobalStyles/GlobalStyles";
 import GridSystem from "./styles/GridSystem/GridSystem";
-import Header from "./components/Header/Header";
+import Header from "../components/Header/Header";
 
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider } from "../context/ThemeContext";
+
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "src/i18n/routing";
 
 export const metadata: Metadata = {
   title: "d2csgame",
@@ -33,21 +38,32 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages({ locale });
   return (
     <GlobalStyles>
       <ThemeProvider>
         <html lang="en">
           <body>
             <div className={cx("container")}>
-              <Header />
-              <GridSystem gridClass={cx1("grid")} wideClass={cx1("wide")}>
-                {children}
-              </GridSystem>
+              <NextIntlClientProvider messages={messages}>
+                <Header />
+                <GridSystem gridClass={cx1("grid")} wideClass={cx1("wide")}>
+                  {children}
+                </GridSystem>
+              </NextIntlClientProvider>
             </div>
           </body>
         </html>
