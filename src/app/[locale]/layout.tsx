@@ -8,14 +8,14 @@ const cx1 = classNames.bind(styles1);
 
 import GlobalStyles from "./styles/GlobalStyles/GlobalStyles";
 import GridSystem from "./styles/GridSystem/GridSystem";
-import Header from "../components/Header/Header";
+import Header from "../components/ui/Header/Header";
 
-import { ThemeProvider } from "../context/ThemeContext";
+import { ThemeProvider } from "../components/context/ThemeContext";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "src/i18n/routing";
+import { routing, Locale } from "src/i18n/routing";
 
 export const metadata: Metadata = {
   title: "d2csgame",
@@ -47,7 +47,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 

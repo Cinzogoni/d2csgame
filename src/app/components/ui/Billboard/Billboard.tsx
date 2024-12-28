@@ -2,13 +2,15 @@ import styles from "../Billboard/Billboard.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
-import Link from "next/link";
+import { Link } from "src/i18n/routing";
+import { getTranslations } from "next-intl/server";
 
-function Billboard() {
+async function Billboard() {
+  const t = await getTranslations("HomePage");
   return (
     <div className={cx("billboard")}>
       <article className={cx("news")}>
-        <h4 className={cx("news-title")}>Tin tức</h4>
+        <h4 className={cx("news-title")}>{t("news")}</h4>
         <div className={cx("news-frame")}>
           <div className={cx("new")}></div>
           <div className={cx("new")}></div>

@@ -1,8 +1,37 @@
 {
-  "IndexPage": {
+  "HomePage": {
     "buyingGuide": "Buying Guide",
     "sellingGuide": "Selling Guide",
     "paymentMethods": "Payment Methods",
-    "fanPage": "FanPage"
+    "fanPage": "FanPage",
+    "news": "News"
+  },
+
+  "Form": {
+    "submit": "Submit",
+    "login": {
+      "userNameOrPhoneNumber": "Username or phone number",
+      "enterPassword": "Enter password"
+    },
+    "signUp": {
+      "fullName": "Full name",
+      "email": "Email",
+      "phoneNumber": "Phone number",
+      "location": "Location",
+      "setPassword": "Set password"
+    },
+    "changePassword": {
+      "currentPassword": "Current password",
+      "NewPassword": "New password"
+    },
+    "forgotPassword": {
+      "enterUserName": "Enter username",
+      "enterPhoneName": "Enter phone number",
+      "enterEmail": "Enter email"
+    },
+    "passwordRecovery": {
+      "enterRecoveryCode": "Enter recovery code",
+      "recoveryCodeSent": "Check your email or SMS"
+    }
   }
 }

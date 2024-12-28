@@ -1,8 +1,37 @@
 {
-  "IndexPage": {
+  "HomePage": {
     "buyingGuide": "Руководство по покупкам",
     "sellingGuide": "Руководство по продажам",
     "paymentMethods": "Методы оплаты",
-    "fanPage": "Фан-страница"
+    "fanPage": "Фан-страница",
+    "news": "Новости"
+  },
+
+  "Form": {
+    "submit": "Отправить",
+    "login": {
+      "userNameOrPhoneNumber": "Имя пользователя или номер телефона",
+      "enterPassword": "Введите пароль"
+    },
+    "signUp": {
+      "fullName": "Полное имя",
+      "email": "Электронная почта",
+      "phoneNumber": "Номер телефона",
+      "location": "Местоположение",
+      "setPassword": "Установить пароль"
+    },
+    "changePassword": {
+      "currentPassword": "Текущий пароль",
+      "NewPassword": "Новый пароль"
+    },
+    "forgotPassword": {
+      "enterUserName": "Введите имя пользователя",
+      "enterPhoneName": "Введите номер телефона",
+      "enterEmail": "Введите электронную почту"
+    },
+    "passwordRecovery": {
+      "enterRecoveryCode": "Введите код восстановления",
+      "recoveryCodeSent": "Проверьте свою электронную почту или SMS"
+    }
   }
 }

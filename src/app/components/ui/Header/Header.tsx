@@ -4,7 +4,8 @@ import styles from "./Header.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
-import { useTheme } from "src/app/context/ThemeContext";
+import { useTheme } from "src/app/components/context/ThemeContext";
+import LocaleSwitcher from "../LocaleSwitcher";
 
 function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -14,6 +15,8 @@ function Header() {
       <button onClick={toggleTheme}>
         {theme === "dark" ? "light" : "dark"}
       </button>
+
+      <LocaleSwitcher />
     </header>
   );
 }

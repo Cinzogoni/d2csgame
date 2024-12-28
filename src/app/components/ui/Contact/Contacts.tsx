@@ -10,21 +10,21 @@ import {
 } from "react-icons/fa";
 
 import { Link } from "src/i18n/routing";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-function Contact() {
-  const t = useTranslations("IndexPage");
+async function Contact() {
+  const t = await getTranslations("HomePage");
   return (
     <div className={cx("contacts")}>
-      <Link href="/" className={cx("link")}>
+      <Link href="/buying" className={cx("link")}>
         <FaShoppingCart style={{ margin: "0 6px" }} />
         {t("buyingGuide")}
       </Link>
-      <Link href="/" className={cx("link")}>
+      <Link href="/selling" className={cx("link")}>
         <FaHandHoldingUsd style={{ margin: "0 6px" }} />
         {t("sellingGuide")}
       </Link>
-      <Link href="/" className={cx("link")}>
+      <Link href="/payment" className={cx("link")}>
         <FaCreditCard style={{ margin: "0 6px" }} />
         {t("paymentMethods")}
       </Link>

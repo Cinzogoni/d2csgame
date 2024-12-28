@@ -1,8 +1,40 @@
 {
-  "IndexPage": {
+  "HomePage": {
     "buyingGuide": "Hướng dẫn mua",
     "sellingGuide": "Hướng dẫn bán item",
     "paymentMethods": "Phương thức thanh toán",
-    "fanPage": "FanPage"
+    "fanPage": "FanPage",
+    "news": "Tin tức"
+  },
+
+  "Form": {
+    "submit": "Gửi",
+    "login": {
+      "userNameOrPhoneNumber": "Tên người dùng hoặc số điện thoại",
+      "enterPassword": "Nhập mật khẩu"
+    },
+    "signUp": {
+      "fullName": "Tên đầy đủ",
+      "email": "Thư điện tử",
+      "phoneNumber": "Số điện thoại",
+      "location": "Vị trí",
+      "setPassword": "Đặt mật khẩu"
+    },
+
+    "changePassword": {
+      "currentPassword": "Mật khẩu hiện tại",
+      "NewPassword": "Mật khẩu mới"
+    },
+
+    "forgotPassword": {
+      "enterUserName": "Nhập tên người dùng",
+      "enterPhoneName": "Nhập số điện thoại",
+      "enterEmail": "Nhập thư điện tử"
+    },
+
+    "passwordRecovery": {
+      "enterRecoveryCode": "Nhập mã khôi phục",
+      "recoveryCodeSent": "Kiểm tra email hoặc tin nhắn điện thoại"
+    }
   }
 }

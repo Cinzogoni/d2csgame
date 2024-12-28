@@ -4,11 +4,11 @@ const cx = classNames.bind(styles);
 
 import { useTranslations } from "next-intl";
 
-import Contact from "../components/Contact/Contacts";
-import Billboard from "../components/Billboard/Billboard";
+import Contact from "../components/ui/Contact/Contacts";
+import Billboard from "../components/ui/Billboard/Billboard";
 
 function Home() {
-  const t = useTranslations("IndexPage");
+  const t = useTranslations("HomePage");
   return (
     <main className={cx("wrapper")}>
       <div className={cx("container")}>
