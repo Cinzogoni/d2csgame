@@ -1,0 +1,54 @@
+.wrapper {
+  width: 100%;
+  height: 185px;
+  margin-bottom: 24px;
+}
+
+.view-all {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link {
+  // width: 180px;
+  height: 100%;
+  padding: 0 6px;
+  background-color: var(--frame-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products {
+  padding: 6px;
+  box-shadow: var(--frame-shadow);
+  background-color: var(--frame-background-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+}
+
+.product {
+  width: 110px;
+  height: 173px;
+  background-color: var(--element-background-color);
+  clip-path: var(--element-corner-frame);
+  border-top-left-radius: var(--element-corner-radius);
+  border-bottom-right-radius: var(--element-corner-radius);
+}
+
+@media (max-width: 630px) {
+  .wrapper {
+    margin-bottom: 12px;
+  }
+}

@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 
 import styles from "../[locale]/styles/layout.module.scss";
-import styles1 from "../[locale]/styles/GridSystem/GridSystem.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
-const cx1 = classNames.bind(styles1);
 
 import GlobalStyles from "./styles/GlobalStyles/GlobalStyles";
-import GridSystem from "./styles/GridSystem/GridSystem";
 import Header from "../components/ui/Header/Header";
 
 import { ThemeProvider } from "../components/context/ThemeContext";
@@ -55,14 +52,12 @@ export default async function LocaleLayout({
   return (
     <GlobalStyles>
       <ThemeProvider>
-        <html lang="en">
+        <html lang={locale}>
           <body>
             <div className={cx("container")}>
               <NextIntlClientProvider messages={messages}>
                 <Header />
-                <GridSystem gridClass={cx1("grid")} wideClass={cx1("wide")}>
-                  {children}
-                </GridSystem>
+                {children}
               </NextIntlClientProvider>
             </div>
           </body>

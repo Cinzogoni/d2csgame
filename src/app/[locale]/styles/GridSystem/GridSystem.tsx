@@ -3,7 +3,7 @@ import classNames from "classnames/bind";
 import { ReactNode, memo } from "react";
 
 interface GridSystemProps {
-  children: ReactNode;
+  children?: ReactNode;
   gridClass?: string;
   wideClass?: string;
   rowClass?: string;

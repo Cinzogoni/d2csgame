@@ -12,9 +12,9 @@ async function Billboard() {
       <article className={cx("news")}>
         <h4 className={cx("news-title")}>{t("news")}</h4>
         <div className={cx("news-frame")}>
-          <div className={cx("new")}></div>
-          <div className={cx("new")}></div>
-          <div className={cx("new")}></div>
+          <Link href="/" className={cx("new")}></Link>
+          <Link href="/" className={cx("new")}></Link>
+          <Link href="/" className={cx("new")}></Link>
         </div>
       </article>
       <aside className={cx("banners")}>

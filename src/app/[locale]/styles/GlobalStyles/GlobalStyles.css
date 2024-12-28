@@ -52,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ button,
 input {
   outline: none;
   border: none;
-  /* background-color: transparent; */
+  background-color: transparent;
 }
 
 a {
