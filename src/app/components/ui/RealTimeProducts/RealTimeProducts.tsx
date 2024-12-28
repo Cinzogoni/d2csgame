@@ -5,9 +5,13 @@ const cx = classNames.bind(styles);
 import GridSystem from "src/app/[locale]/styles/GridSystem/GridSystem";
 
 import { Link } from "src/i18n/routing";
+import { getTranslations } from "next-intl/server";
+
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
-function RealTimeProducts() {
+async function RealTimeProducts() {
+  const t = await getTranslations("HomePage");
+
   const products = Array.from({ length: 10 }, (_, index) => ({
     id: index + 1,
     name: `Product ${index + 1}`,
@@ -16,7 +20,7 @@ function RealTimeProducts() {
   return (
     <div className={cx("wrapper")}>
       <button className={cx("view-all")}>
-        <Link href="/RealTimeProducts" className={cx("link")}>
+        <Link href="/realtimeProducts" className={cx("link")}>
           <h4
             style={{
               fontWeight: "600",
@@ -24,7 +28,7 @@ function RealTimeProducts() {
               margin: "0 6px 0 10px",
             }}
           >
-            Vừa cập nhật
+            {t("realtimeProducts")}
           </h4>
           <FaAngleRight
             style={{
