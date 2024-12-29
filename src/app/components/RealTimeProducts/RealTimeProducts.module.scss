@@ -1,3 +1,5 @@
+@use "@styles/variable.scss" as *;
+
 .wrapper {
   width: 100%;
   height: 185px;
@@ -14,37 +16,44 @@
 }
 
 .link {
-  // width: 180px;
   height: 100%;
   padding: 0 6px;
-  background-color: var(--frame-background-color);
+  background-color: $frame-background-color;
+  border: $primary-separation;
+  box-shadow: $frame-shadow;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .products {
-  padding: 6px;
-  box-shadow: var(--frame-shadow);
-  background-color: var(--frame-background-color);
+  padding: 6px 0;
+  box-shadow: $frame-shadow;
+  background-color: $frame-background-color;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.move {
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .frame {
   width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .product {
-  width: 110px;
+  width: 100%;
   height: 173px;
-  background-color: var(--element-background-color);
-  clip-path: var(--element-corner-frame);
-  border-top-left-radius: var(--element-corner-radius);
-  border-bottom-right-radius: var(--element-corner-radius);
+  background-color: $element-background-color;
+  @include corner-styles($element-corner-radius, $element-corner-frame);
 }
 
 @media (max-width: 630px) {

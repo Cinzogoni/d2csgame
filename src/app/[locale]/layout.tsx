@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
 
+import "../[locale]/styles/globals.scss";
 import styles from "../[locale]/styles/layout.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
-
-import GlobalStyles from "./styles/GlobalStyles/GlobalStyles";
-import Header from "../components/ui/Header/Header";
-
-import { ThemeProvider } from "../components/context/ThemeContext";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing, Locale } from "src/i18n/routing";
+
+import Header from "../components/Header/Header";
 
 export const metadata: Metadata = {
   title: "d2csgame",
@@ -50,19 +48,15 @@ export default async function LocaleLayout({
 
   const messages = await getMessages({ locale });
   return (
-    <GlobalStyles>
-      <ThemeProvider>
-        <html lang={locale}>
-          <body>
-            <div className={cx("container")}>
-              <NextIntlClientProvider messages={messages}>
-                <Header />
-                {children}
-              </NextIntlClientProvider>
-            </div>
-          </body>
-        </html>
-      </ThemeProvider>
-    </GlobalStyles>
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <div className={cx("container")}>
+            <Header />
+            {children}
+          </div>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

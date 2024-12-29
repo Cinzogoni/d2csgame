@@ -1,3 +1,5 @@
+@use "@styles/variable.scss" as *;
+
 .billboard {
   width: 100%;
   height: 500px;
@@ -10,9 +12,9 @@
   width: 23.2%;
   height: 100%;
   padding: 0 6px;
-  box-shadow: var(--frame-shadow);
-  border: var(--primary-separation);
-  background-color: var(--frame-background-color);
+  box-shadow: $frame-shadow;
+  border: $primary-separation;
+  background-color: $frame-background-color;
 }
 
 .news-title {
@@ -34,11 +36,9 @@
 .new {
   width: 100%;
   height: 147.66667px;
-  background-color: var(--element-background-color);
-  border: var(--primary-separation);
-  clip-path: var(--element-corner-frame);
-  border-top-left-radius: var(--element-corner-radius);
-  border-bottom-right-radius: var(--element-corner-radius);
+  background-color: $element-background-color;
+  border: $primary-separation;
+  @include corner-styles($element-corner-radius, $element-corner-frame);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,18 +48,16 @@
   width: 74.49248%;
   height: 100%;
   padding: 6px;
-  box-shadow: var(--frame-shadow);
-  background-color: var(--frame-background-color);
+  box-shadow: $frame-shadow;
+  background-color: $frame-background-color;
 }
 
 .banners-frame {
   width: 100%;
   height: 100%;
-  background-color: var(--element-background-color);
-  border: var(--primary-separation);
-  clip-path: var(--banners-corner-frame);
-  border-top-left-radius: var(--element-corner-radius);
-  border-bottom-right-radius: var(--element-corner-radius);
+  background-color: $element-background-color;
+  border: $primary-separation;
+  @include corner-styles($element-corner-radius, $banners-corner-frame);
   display: flex;
   justify-content: space-between;
 }
@@ -68,40 +66,40 @@
 .banners-both-sides-right {
   width: 22.46336%;
   height: 100%;
-  border: var(--primary-separation);
+  border: $primary-separation;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .banners-both-sides-left {
-  border-top-left-radius: var(--element-corner-radius);
+  border-top-left-radius: $element-corner-radius;
 }
 
 .banners-both-sides-right {
-  border-bottom-right-radius: var(--element-corner-radius);
+  border-bottom-right-radius: $element-corner-radius;
 }
 
 .banners-box,
 .banners-box-1 {
   width: 100%;
   height: 116px;
-  border-bottom: var(--primary-separation);
-  background-color: var(--element-background-color);
+  border-bottom: $primary-separation;
+  background-color: $element-background-color;
 }
 
 .banners-box:first-child {
-  border-top-left-radius: var(--element-corner-radius);
+  border-top-left-radius: $element-corner-radius;
 }
 
 .banners-box-1:last-child {
-  border-bottom-right-radius: var(--element-corner-radius);
+  border-bottom-right-radius: $element-corner-radius;
 }
 
 .banners-center {
   width: 53.76499%;
   height: 100%;
-  border: var(--primary-separation);
+  border: $primary-separation;
 }
 
 .banners-center-box {

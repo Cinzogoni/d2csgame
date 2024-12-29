@@ -1,4 +1,4 @@
-import styles from "./GridSystem.module.scss";
+import styles from "../GridSystem/GridSystem.module.scss";
 import classNames from "classnames/bind";
 import { ReactNode, memo } from "react";
 
@@ -14,6 +14,7 @@ interface GridSystemProps {
   colSM?: string;
   colS?: string;
   colMo?: string;
+  colMi?: string;
 }
 
 const cx = classNames.bind(styles);
@@ -30,6 +31,7 @@ function GridSystem({
   colSM,
   colS,
   colMo,
+  colMi,
 }: GridSystemProps) {
   const classes = cx(
     gridClass,
@@ -41,7 +43,8 @@ function GridSystem({
     colM,
     colSM,
     colS,
-    colMo
+    colMo,
+    colMi
   );
 
   return <div className={classes}>{children}</div>;

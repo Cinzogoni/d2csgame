@@ -1,7 +1,9 @@
+"use client";
+
 import { Locale, routing, usePathname, useRouter } from "src/i18n/routing";
 import { useLocale } from "next-intl";
 
-function LocaleSwitcher() {
+function LanguagesSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
@@ -26,4 +28,4 @@ function LocaleSwitcher() {
   );
 }
 
-export default LocaleSwitcher;
+export default LanguagesSwitcher;

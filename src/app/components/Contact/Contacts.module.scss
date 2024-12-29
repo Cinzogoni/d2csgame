@@ -1,3 +1,5 @@
+@use "@styles/variable.scss" as *;
+
 .contacts {
   width: 100%;
   height: 48px;
@@ -10,12 +12,12 @@
 .link {
   width: 23.2%;
   height: 100%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   padding: 0 6px;
-  background-color: var(--frame-background-color);
-  border: var(--primary-separation);
-  box-shadow: var(--frame-shadow);
+  background-color: $frame-background-color;
+  border: $primary-separation;
+  box-shadow: $frame-shadow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,8 +25,8 @@
 }
 
 .link:hover {
-  background-color: var(--hover-background-color);
-  color: var(--text-hover-color);
+  background-color: $hover-background-color;
+  color: $text-hover-color;
 }
 
 @media (max-width: 630px) {
