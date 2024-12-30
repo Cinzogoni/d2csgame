@@ -17,20 +17,31 @@ async function Contact() {
   return (
     <div className={cx("contacts")}>
       <Link href="/buying" className={cx("link")}>
-        <FaShoppingCart style={{ margin: "0 6px" }} />
-        {t("buyingGuide")}
+        <div className={cx("box")}>
+          <FaShoppingCart className={cx("icon")} />
+          <h4 className={cx("category")}>{t("buyingGuide")}</h4>
+        </div>
       </Link>
+
       <Link href="/selling" className={cx("link")}>
-        <FaHandHoldingUsd style={{ margin: "0 6px" }} />
-        {t("sellingGuide")}
+        <div className={cx("box")}>
+          <FaHandHoldingUsd className={cx("icon")} />
+          <h4 className={cx("category")}>{t("sellingGuide")}</h4>
+        </div>
       </Link>
+
       <Link href="/payment" className={cx("link")}>
-        <FaCreditCard style={{ margin: "0 6px" }} />
-        {t("paymentMethods")}
+        <div className={cx("box")}>
+          <FaCreditCard className={cx("icon")} />
+          <h4 className={cx("category")}>{t("paymentMethods")}</h4>
+        </div>
       </Link>
+
       <Link href="/" className={cx("link")}>
-        <FaFacebook style={{ margin: "0 6px" }} />
-        {t("fanPage")}
+        <div className={cx("box")}>
+          <FaFacebook className={cx("icon")} />
+          <h4 className={cx("category")}>{t("fanPage")}</h4>
+        </div>
       </Link>
     </div>
   );

@@ -21,11 +21,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
 }
 
-.link:hover {
+.box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  margin: 0 6px;
+}
+
+.category {
+  color: $primary-text-color;
+  transition: color 0.25s ease;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 50px;
+  left: 0;
   background-color: $hover-background-color;
+  transition: width 0.25s ease, left 0.25s ease;
+}
+
+.link:hover::before {
+  width: 105%;
+  left: 0;
+}
+
+.link:hover .box {
+  position: absolute;
+  color: $text-hover-color;
+}
+
+.link:hover .category {
   color: $text-hover-color;
 }
 
