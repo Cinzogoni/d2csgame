@@ -132,21 +132,14 @@ function Billboard() {
 
     if (!isVideoPlaying) {
       intervalId = setInterval(() => {
-        setScrollIndex((prevIndex) => {
-          if (prevIndex === scrollIndex) {
-            handleScroll("prev");
-          } else {
-            handleScroll("next");
-          }
-          return prevIndex;
-        });
-      }, 3000);
+        handleScroll("next");
+      }, 5000);
     }
 
     return () => {
       if (intervalId) clearInterval(intervalId);
     };
-  }, [handleScroll, isVideoPlaying, scrollIndex]);
+  }, [handleScroll, isVideoPlaying]);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
