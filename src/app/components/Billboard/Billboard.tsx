@@ -106,11 +106,14 @@ function Billboard() {
       }
       return prevIndex;
     });
-
-    setActiveSlide(slide);
-    setTimeout(() => {
+    if (!isVideoPlaying) {
       setActiveSlide(null);
-    }, 100);
+    } else {
+      setActiveSlide(slide);
+      setTimeout(() => {
+        setActiveSlide(null);
+      }, 100);
+    }
   };
 
   const transformValue = () => {

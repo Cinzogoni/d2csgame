@@ -9,7 +9,7 @@
 }
 
 .news {
-  width: 23.2%;
+  width: 16.2%;
   height: 100%;
   padding: 0 6px;
   box-shadow: $frame-shadow;
@@ -70,12 +70,11 @@
   align-items: center;
   z-index: 10;
   background-color: $hover-background-color;
-  border-top: $element-border;
   box-shadow: $element-shadow;
 }
 
 .banners {
-  width: 74.49248%;
+  width: 81.49248%;
   height: 100%;
   padding: 6px;
   box-shadow: $frame-shadow;
@@ -138,8 +137,7 @@
 .banner-img-both-sides {
   width: 100%;
   height: 100%;
-  // object-fit: cover;
-  object-fit: fill;
+  object-fit: cover;
   transition: transform 0.25s ease;
 }
 
@@ -151,8 +149,6 @@
 .banners-video {
   width: 53.5%;
   height: 100%;
-  border-left: $element-border;
-  border-right: $element-border;
   box-shadow: $element-shadow;
   position: relative;
 }
@@ -169,6 +165,7 @@
 .slide {
   background-color: $frame-background-color;
   box-shadow: $element-shadow;
+  margin: 0 6px;
 }
 
 .slide-icon {

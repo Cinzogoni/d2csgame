@@ -1,9 +1,6 @@
 .container {
   flex: 1;
   min-width: 340px;
-  border-left: var(--primary-separation);
-  border-right: var(--primary-separation);
-  box-shadow: 0 7px 10px rgba(255, 255, 255, 0.5);
   padding: 24px;
 
   display: flex;

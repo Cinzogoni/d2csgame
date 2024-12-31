@@ -18,7 +18,6 @@ $element-corner-radius: 12px;
 $primary-separation: 0.5px solid rgba(105, 105, 105, 0.6);
 $frame-shadow: 0 0 5px rgb(35, 35, 35);
 $element-shadow: 0 0 2px rgb(35, 35, 35);
-$element-border: 2.5px solid rgba(105, 105, 105, 0.6);
 
 @mixin corner-styles($radius, $frame: none) {
   border-top-left-radius: $radius;
