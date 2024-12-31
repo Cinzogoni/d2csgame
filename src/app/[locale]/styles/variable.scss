@@ -6,16 +6,19 @@ $main-text-font: "Poppins", sans-serif;
 $primary-text-color: #34495e;
 $text-hover-color: #ffffffcc;
 
-$frame-background-color: hsla(0, 0%, 100%, 0.85);
+$frame-background-color: rgba(255, 255, 255, 0.85);
 $element-background-color: #5a62694d;
-$hover-background-color: hsla(240, 9%, 19%, 1);
+$hover-background-color: rgb(44, 44, 53);
 $scrollbar-color: rgb(165, 165, 165);
 
-$primary-separation: 0.5px solid rgba(105, 105, 105, 0.6);
-$frame-shadow: 0 0 5px rgb(35, 35, 35);
 $banners-corner-frame: polygon(97% 0%, 215% 350%, -38% 50%, 0% 0%);
 $element-corner-frame: polygon(90% 0%, 215% 350%, -25% 50%, 0% 0%);
 $element-corner-radius: 12px;
+
+$primary-separation: 0.5px solid rgba(105, 105, 105, 0.6);
+$frame-shadow: 0 0 5px rgb(35, 35, 35);
+$element-shadow: 0 0 2px rgb(35, 35, 35);
+$element-border: 2.5px solid rgba(105, 105, 105, 0.6);
 
 @mixin corner-styles($radius, $frame: none) {
   border-top-left-radius: $radius;

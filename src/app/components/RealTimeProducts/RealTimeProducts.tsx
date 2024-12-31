@@ -20,7 +20,11 @@ function RealTimeProducts() {
   const [activeMove, setActiveMove] = useState<Move | null>(null);
 
   const products = [
-    { id: 1 },
+    {
+      id: 1,
+      imgUrl:
+        "https://d2set.net/Uploads/thumb/12a440b419d58482c3da42d5d81aa375.jpg",
+    },
     { id: 2 },
     { id: 3 },
     { id: 4 },
@@ -35,16 +39,20 @@ function RealTimeProducts() {
     { id: 13 },
     { id: 14 },
     { id: 15 },
-    { id: 16 },
+    {
+      id: 16,
+      imgUrl:
+        "https://d2set.net/Uploads/thumb/f4492a76642add20f6706f82dc287783.png",
+    },
   ];
 
   const calculateBoxesPerSlide = useCallback(() => {
-    if (width >= 1920) return 10;
-    if (width >= 1366 && width < 1920) return 10;
+    if (width >= 1920) return 8;
+    if (width >= 1366 && width < 1920) return 8;
     if (width >= 1024 && width < 1366) return 8;
     if (width >= 768 && width < 1024) return 6;
-    if (width >= 630 && width < 768) return 6;
-    if (width >= 430 && width < 630) return 4;
+    if (width >= 630 && width < 768) return 4;
+    if (width >= 430 && width < 630) return 2;
     if (width < 430) return 2;
     return 10;
   }, [width]);
@@ -52,11 +60,7 @@ function RealTimeProducts() {
   const handleScroll = (move: Move) => {
     const totalBoxes = products.length;
     const boxesPerSlide = calculateBoxesPerSlide();
-    const maxScrollIndex = Math.ceil(totalBoxes / boxesPerSlide) - 1;
-
-    console.log("totalBoxes:", totalBoxes);
-    console.log("boxesPerSlide:", boxesPerSlide);
-    console.log("maxScrollIndex:", maxScrollIndex);
+    const maxScrollIndex = totalBoxes - boxesPerSlide;
 
     setScrollIndex((prevIndex) => {
       if (move === "prev") return Math.max(prevIndex - 1, 0);
@@ -132,15 +136,21 @@ function RealTimeProducts() {
                 <GridSystem
                   key={product.id}
                   colClass={cx("col")}
-                  colL={cx("l-1-10")}
-                  colML={cx("ml-1-10")}
+                  colL={cx("l-1-8")}
+                  colML={cx("ml-1-8")}
                   colM={cx("m-1-8")}
                   colSM={cx("sm-2")}
-                  colS={cx("s-2")}
-                  colMo={cx("mo-3")}
+                  colS={cx("s-3")}
+                  colMo={cx("mo-6")}
                   colMi={cx("mi-6")}
                 >
-                  <div className={cx("product")}></div>
+                  <div className={cx("product")}>
+                    <img className={cx("img")} src={product.imgUrl} alt="" />
+                    <div className={cx("info")}>
+                      <h5 className={cx("name")}>Product name</h5>
+                      <h6 className={cx("price")}>price</h6>
+                    </div>
+                  </div>
                 </GridSystem>
               );
             })}

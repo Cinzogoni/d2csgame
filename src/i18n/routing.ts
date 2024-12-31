@@ -28,6 +28,16 @@ export const routing = defineRouting({
       en: "/real-time-update",
       ru: "/обновление-в-реальном-времени",
     },
+    "/news": {
+      vi: "/tin-tuc",
+      en: "/news",
+      ru: "/новости",
+    },
+    "/classification": {
+      vi: "/phan-loai",
+      en: "/classification",
+      ru: "/классификация",
+    },
   },
 });
 

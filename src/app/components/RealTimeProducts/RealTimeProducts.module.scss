@@ -46,7 +46,6 @@
 .frame {
   width: 100%;
   display: flex;
-  justify-content: center;
 }
 
 .product {
@@ -54,6 +53,42 @@
   height: 173px;
   background-color: $element-background-color;
   @include corner-styles($element-corner-radius, $element-corner-frame);
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.product:hover .img {
+  transform: scale(1.1);
+}
+
+.info {
+  width: 100%;
+  height: 73px;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $hover-background-color;
+  border-top: $element-border;
+  box-shadow: $element-shadow;
+}
+
+.name,
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.7;
+  color: $text-hover-color;
 }
 
 @media (max-width: 630px) {

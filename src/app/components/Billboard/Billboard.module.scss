@@ -33,15 +33,45 @@
   justify-content: space-between;
 }
 
-.new {
+.link {
   width: 100%;
   height: 147.66667px;
   background-color: $element-background-color;
   border: $primary-separation;
   @include corner-styles($element-corner-radius, $element-corner-frame);
+  overflow: hidden;
+}
+
+.new {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.new-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.link:hover .new-img {
+  transform: scale(1.1);
+}
+
+.published {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: $hover-background-color;
+  border-top: $element-border;
+  box-shadow: $element-shadow;
 }
 
 .banners {
@@ -60,6 +90,14 @@
   @include corner-styles($element-corner-radius, $banners-corner-frame);
   display: flex;
   justify-content: space-between;
+}
+
+.banners-both-sides-right:nth-child(2) {
+  order: 3;
+}
+
+.banners-video:nth-child(3) {
+  order: 2;
 }
 
 .banners-both-sides-left,
@@ -86,6 +124,7 @@
   height: 116px;
   border-bottom: $primary-separation;
   background-color: $element-background-color;
+  overflow: hidden;
 }
 
 .banners-box:first-child {
@@ -96,23 +135,32 @@
   border-bottom-right-radius: $element-corner-radius;
 }
 
-.banners-center {
-  width: 53.76499%;
-  height: 100%;
-  border: $primary-separation;
-}
-
-.banners-center-box {
+.banner-img-both-sides {
   width: 100%;
   height: 100%;
+  // object-fit: cover;
+  object-fit: fill;
+  transition: transform 0.25s ease;
 }
 
-.image-style {
+.banners-box:hover .banner-img-both-sides,
+.banners-box-1:hover .banner-img-both-sides {
+  transform: scale(1.1);
+}
+
+.banners-video {
+  width: 53.5%;
+  height: 100%;
+  border-left: $element-border;
+  border-right: $element-border;
+  box-shadow: $element-shadow;
+}
+
+.video-frame {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
 }
-
 @media (max-width: 630px) {
   .billboard {
     width: unset;
@@ -132,8 +180,9 @@
     flex-direction: row;
   }
 
-  .new {
-    width: 32%;
+  .link {
+    //   width: 32%;
+    margin: 0 6px;
   }
 
   .banners {
@@ -151,7 +200,7 @@
     height: 100%;
   }
 
-  .banners-center {
+  .banners-video {
     width: 100%;
     height: 100%;
     margin: 6px 0;
@@ -173,7 +222,7 @@
     margin-bottom: 6px;
   }
 
-  .banners-center-box {
+  .banners-video-box {
     width: 100%;
     height: 240px;
   }
