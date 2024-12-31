@@ -10,6 +10,7 @@ import { useState, useCallback, useEffect } from "react";
 
 import dynamic from "next/dynamic";
 import GridSystem from "../GridSystem/GridSystem";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -66,10 +67,15 @@ const bannerVideos = [
   { id: 3, videoUrl: "https://www.youtube.com/watch?v=HHSTjIivLhw" },
 ];
 
+type videoId = number | boolean;
+type slider = "prev" | "next";
+
 function Billboard() {
   const t = useTranslations("HomePage");
   const [width, setWidth] = useState<number>(0);
   const [scrollIndex, setScrollIndex] = useState<number>(0);
+  const [isVideoPlaying, setIsVideoPlaying] = useState<videoId>(false);
+  const [activeSlide, setActiveSlide] = useState<slider | null>(null);
 
   const calculateBoxesPerSlide = useCallback(() => {
     if (width >= 1920) return 1;
@@ -82,15 +88,29 @@ function Billboard() {
     return 1;
   }, [width]);
 
-  const handleScroll = () => {
+  const handleScroll = (slide: slider) => {
+    if (isVideoPlaying) return;
+
     const totalBoxes = bannerVideos.length;
     const boxesPerSlide = calculateBoxesPerSlide();
     const maxScrollIndex = totalBoxes - boxesPerSlide;
 
     setScrollIndex((prevIndex) => {
-      if (prevIndex === maxScrollIndex) return 0;
-      return prevIndex + 1;
+      if (slide === "next") {
+        if (prevIndex === maxScrollIndex) return 0;
+        return prevIndex + 1;
+      }
+      if (slide === "prev") {
+        if (prevIndex === 0) return maxScrollIndex;
+        return prevIndex - 1;
+      }
+      return prevIndex;
     });
+
+    setActiveSlide(slide);
+    setTimeout(() => {
+      setActiveSlide(null);
+    }, 100);
   };
 
   const transformValue = () => {
@@ -99,13 +119,34 @@ function Billboard() {
     return `translateX(-${scrollIndex * slideWidth}%)`;
   };
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      handleScroll();
-    }, 3000);
+  const handleVideoPlay = (id: videoId) => {
+    setIsVideoPlaying(id);
+  };
 
-    return () => clearInterval(intervalId);
-  }, [handleScroll]);
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+  };
+
+  useEffect(() => {
+    let intervalId = null;
+
+    if (!isVideoPlaying) {
+      intervalId = setInterval(() => {
+        setScrollIndex((prevIndex) => {
+          if (prevIndex === scrollIndex) {
+            handleScroll("prev");
+          } else {
+            handleScroll("next");
+          }
+          return prevIndex;
+        });
+      }, 3000);
+    }
+
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, [handleScroll, isVideoPlaying, scrollIndex]);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
@@ -193,6 +234,31 @@ function Billboard() {
 
           <div className={cx("banners-video")}>
             <GridSystem rowClass={cx("row-1")}>
+              <div className={cx("slides")}>
+                <div className={cx("slide")}>
+                  <FaAngleLeft
+                    className={cx("slide-icon")}
+                    onClick={() => handleScroll("prev")}
+                    style={{
+                      transition: "transform 0.25s ease",
+                      transform:
+                        activeSlide === "prev" ? "scale(1.2)" : "scale(1)",
+                    }}
+                  />
+                </div>
+                <div className={cx("slide")}>
+                  <FaAngleRight
+                    className={cx("slide-icon")}
+                    onClick={() => handleScroll("next")}
+                    style={{
+                      transition: "transform 0.25s ease",
+                      transform:
+                        activeSlide === "next" ? "scale(1.2)" : "scale(1)",
+                    }}
+                  />
+                </div>
+              </div>
+
               <div
                 className={cx("video-frame")}
                 style={{
@@ -219,6 +285,8 @@ function Billboard() {
                         height="100%"
                         controls={true}
                         style={{ objectFit: "cover" }}
+                        onPlay={() => handleVideoPlay(video.id)}
+                        onPause={handleVideoPause}
                       />
                     </GridSystem>
                   );
