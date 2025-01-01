@@ -5,7 +5,12 @@
     "paymentMethods": "Payment Methods",
     "fanPage": "FanPage",
     "news": "News",
-    "realtimeProducts": "Realtime Update"
+    "realtimeProducts": "Realtime Update",
+    "highlightItem": "Featured Item",
+    "highlightSet": "Featured Set",
+    "itemForSale": "Item for Sale",
+    "setForSale": "Set for Sale",
+    "viewAll": "View all"
   },
 
   "Form": {
@@ -34,12 +39,5 @@
       "enterRecoveryCode": "Enter recovery code",
       "recoveryCodeSent": "Check your email or SMS"
     }
-  },
-
-  "itemsSet": {
-    "highlightItem": "Featured Item",
-    "highlightSet": "Featured Set",
-    "itemForSale": "Item for Sale",
-    "setForSale": "Set for Sale"
   }
 }

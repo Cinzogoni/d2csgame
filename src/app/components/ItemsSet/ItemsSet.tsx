@@ -11,10 +11,10 @@ const outsItem = [
     id: 1,
     imgUrl: "",
   },
-  {
-    id: 2,
-    imgUrl: "",
-  },
+  // {
+  //   id: 2,
+  //   imgUrl: "",
+  // },
 ];
 
 const outsSet = [
@@ -22,14 +22,14 @@ const outsSet = [
     id: 1,
     imgUrl: "",
   },
-  {
-    id: 2,
-    imgUrl: "",
-  },
+  // {
+  //   id: 2,
+  //   imgUrl: "",
+  // },
 ];
 
 function ItemsSet() {
-  const t = useTranslations("itemsSet");
+  const t = useTranslations("HomePage");
 
   return (
     <div className={cx("wrapper")}>
@@ -53,7 +53,7 @@ function ItemsSet() {
           <div className={cx("item-viewAll")}>
             <h4 className={cx("title")}>{t("itemForSale")}</h4>
             <Link href="/" className={cx("viewAll-link")}>
-              <h4 className={cx("action")}>Xem tất cả</h4>
+              <h4 className={cx("action")}>{t("viewAll")}</h4>
               <FaAngleRight className={cx("icon")} />
             </Link>
           </div>
@@ -80,7 +80,7 @@ function ItemsSet() {
           <div className={cx("item-viewAll")}>
             <h4 className={cx("title")}>{t("setForSale")}</h4>
             <Link href="/" className={cx("viewAll-link")}>
-              <h4 className={cx("action")}>Xem tất cả</h4>
+              <h4 className={cx("action")}>{t("viewAll")}</h4>
               <FaAngleRight className={cx("icon")} />
             </Link>
           </div>

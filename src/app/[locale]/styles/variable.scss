@@ -12,8 +12,15 @@ $hover-background-color: rgb(44, 44, 53);
 $scrollbar-color: rgb(155, 155, 155);
 $scrollbar-hover: rgb(119, 119, 119);
 
-$banners-corner-frame: polygon(97% 0%, 215% 350%, -38% 50%, 0% 0%);
-$element-corner-frame: polygon(90% 0%, 215% 350%, -25% 50%, 0% 0%);
+$banners-corner-frame: polygon(0 0, 98% 0, 100% 5%, 100% 100%, 2% 100%, 0 96%);
+$element-corner-frame: polygon(
+  0 0,
+  80% 0,
+  100% 20%,
+  100% 100%,
+  20% 100%,
+  0 80%
+);
 $element-corner-radius: 12px;
 
 $primary-separation: 0.5px solid rgba(105, 105, 105, 0.6);

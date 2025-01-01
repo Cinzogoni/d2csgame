@@ -2,7 +2,7 @@
 
 .wrapper {
   width: 100%;
-  height: 1012px;
+  height: 712px;
   box-shadow: $frame-shadow;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
 }
 
 .item {
-  flex: 5;
+  flex: 1;
   padding: 0 6px;
   background-color: $frame-background-color;
   border-left: $primary-separation;
@@ -34,21 +34,21 @@
 }
 
 .bundle {
-  flex: 5;
+  flex: 1;
   padding: 0 6px;
   background-color: $frame-background-color;
   border-left: $primary-separation;
 }
 
 .outstanding {
-  flex: 3;
+  flex: 0 0 384px;
   background-color: $frame-background-color;
   padding: 0 6px;
 }
 
 .title {
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
   height: 34px;
   display: flex;
   align-items: center;
@@ -58,29 +58,21 @@
   display: flex;
   align-items: center;
   transition: background-color 0.25s ease;
+  background-color: $hover-background-color;
 }
 
 .action {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 600;
   margin: 0 6px 0 10px;
+  color: $text-hover-color;
   transition: color 0.25s ease;
 }
 
 .icon {
   width: 16px;
   height: 16px;
-  color: $primary-text-color;
-  transition: color 0.25s ease;
-}
-
-.viewAll-link:hover .action,
-.viewAll-link:hover .icon {
   color: $text-hover-color;
-}
-
-.viewAll-link:hover {
-  background-color: $hover-background-color;
 }
 
 .frame {
@@ -92,7 +84,7 @@
 
 .outs-link {
   width: 100%;
-  height: 227px;
+  height: 308px;
   padding: 0 6px;
   display: flex;
   justify-content: center;
@@ -134,7 +126,7 @@
 
 @media (max-width: 630px) {
   .wrapper {
-    height: 2012px;
+    height: 1424px;
   }
 
   .sets {

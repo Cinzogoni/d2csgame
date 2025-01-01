@@ -5,7 +5,12 @@
     "paymentMethods": "Методы оплаты",
     "fanPage": "Фан-страница",
     "news": "Новости",
-    "realtimeProducts": "обновление в реальном времени"
+    "realtimeProducts": "обновление в реальном времени",
+    "highlightItem": "Рекомендуемый товар",
+    "highlightSet": "Рекомендуемый набор",
+    "itemForSale": "Товар в продаже",
+    "setForSale": "Набор в продаже",
+    "viewAll": "Посмотреть все"
   },
 
   "Form": {
@@ -34,12 +39,5 @@
       "enterRecoveryCode": "Введите код восстановления",
       "recoveryCodeSent": "Проверьте свою электронную почту или SMS"
     }
-  },
-
-  "itemsSet": {
-    "highlightItem": "Рекомендуемый товар",
-    "highlightSet": "Рекомендуемый набор",
-    "itemForSale": "Товар в продаже",
-    "setForSale": "Набор в продаже"
   }
 }
