@@ -106,7 +106,7 @@ function Billboard() {
       }
       return prevIndex;
     });
-    if (!isVideoPlaying) {
+    if (isVideoPlaying) {
       setActiveSlide(null);
     } else {
       setActiveSlide(slide);
@@ -196,9 +196,9 @@ function Billboard() {
             {leftBanners.map((bannerLeft) => {
               return (
                 <Link
+                  href="/classification"
                   className={cx("banners-box")}
                   key={bannerLeft.id}
-                  href="/classification"
                 >
                   <img
                     className={cx("banner-img-both-sides")}
@@ -214,9 +214,9 @@ function Billboard() {
             {rightBanners.map((bannerRight) => {
               return (
                 <Link
+                  href="/classification"
                   className={cx("banners-box-1")}
                   key={bannerRight.id}
-                  href="/classification"
                 >
                   <img
                     className={cx("banner-img-both-sides")}

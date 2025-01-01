@@ -19,7 +19,6 @@
   height: 100%;
   padding: 0 6px;
   background-color: $frame-background-color;
-  border: $primary-separation;
   box-shadow: $frame-shadow;
   display: flex;
   justify-content: center;
@@ -79,7 +78,6 @@
   align-items: center;
   justify-content: center;
   background-color: $hover-background-color;
-  box-shadow: $element-shadow;
 }
 
 .name,

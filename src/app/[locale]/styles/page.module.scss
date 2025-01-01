@@ -1,7 +1,11 @@
+@use "./variable.scss" as *;
+
 .container {
-  flex: 1;
+  height: 100vh;
+  max-height: calc(100vh - 124px);
   min-width: 340px;
-  padding: 24px;
+  padding: 12px;
+  margin: 24px;
 
   display: flex;
   flex-direction: column;
@@ -10,28 +14,24 @@
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
     border-radius: 50px;
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--primary-light-mode-bg);
+    background: $scrollbar-color;
     border-radius: 50px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--primary-dark-mode-bg);
-    border-radius: 50px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollbar-color);
+    background: $frame-background-color;
     border-radius: 50px;
   }
 }
 
 @media (max-width: 630px) {
   .container {
-    padding: 12px 12px 0 12px;
+    padding: 0px 6px 6px 6px;
+    margin: 12px 0 0 6px;
   }
 }
