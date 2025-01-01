@@ -9,8 +9,8 @@
 }
 
 .news {
-  width: 16.2%;
-  height: 100%;
+  flex: 1;
+  margin-right: 24px;
   padding: 0 6px;
   background-color: $frame-background-color;
   box-shadow: $frame-shadow;
@@ -71,8 +71,7 @@
 }
 
 .banners {
-  width: 81.49248%;
-  height: 100%;
+  flex: 6;
   padding: 6px;
   background-color: $frame-background-color;
   box-shadow: $frame-shadow;
@@ -99,7 +98,6 @@
 .banners-both-sides-right {
   width: 22.46336%;
   height: 100%;
-  // border: $primary-separation;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

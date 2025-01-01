@@ -38,6 +38,16 @@ export const routing = defineRouting({
       en: "/classification",
       ru: "/классификация",
     },
+    // "/item": {
+    //   vi: "/",
+    //   en: "/",
+    //   ru: "/",
+    // },
+    // "/set": {
+    //   vi: "/",
+    //   en: "/",
+    //   ru: "/",
+    // },
   },
 });
 

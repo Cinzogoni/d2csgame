@@ -37,5 +37,12 @@
       "enterRecoveryCode": "Nhập mã khôi phục",
       "recoveryCodeSent": "Kiểm tra email hoặc tin nhắn điện thoại"
     }
+  },
+
+  "itemsSet": {
+    "highlightItem": "Item nổi bật",
+    "highlightSet": "Set nổi bật",
+    "itemForSale": "Item đang bán",
+    "setForSale": "Set đang bán"
   }
 }

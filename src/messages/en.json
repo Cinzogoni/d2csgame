@@ -34,5 +34,12 @@
       "enterRecoveryCode": "Enter recovery code",
       "recoveryCodeSent": "Check your email or SMS"
     }
+  },
+
+  "itemsSet": {
+    "highlightItem": "Featured Item",
+    "highlightSet": "Featured Set",
+    "itemForSale": "Item for Sale",
+    "setForSale": "Set for Sale"
   }
 }

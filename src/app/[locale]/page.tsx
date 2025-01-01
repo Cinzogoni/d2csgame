@@ -4,10 +4,11 @@ const cx = classNames.bind(styles);
 
 import { getTranslations } from "next-intl/server";
 
+import GridSystem from "../components/GridSystem/GridSystem";
 import Contact from "../components/Contact/Contacts";
 import Billboard from "../components/Billboard/Billboard";
 import RealTimeProducts from "../components/RealTimeProducts/RealTimeProducts";
-import GridSystem from "../components/GridSystem/GridSystem";
+import ItemsSet from "../components/ItemsSet/ItemsSet";
 
 function Home() {
   const t = getTranslations("HomePage");
@@ -17,6 +18,7 @@ function Home() {
         <Contact />
         <Billboard />
         <RealTimeProducts />
+        <ItemsSet />
       </GridSystem>
     </main>
   );
