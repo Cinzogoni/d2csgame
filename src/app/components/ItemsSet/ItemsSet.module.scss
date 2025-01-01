@@ -37,7 +37,7 @@
   flex: 5;
   padding: 0 6px;
   background-color: $frame-background-color;
-  border-right: $primary-separation;
+  border-left: $primary-separation;
 }
 
 .outstanding {
@@ -130,4 +130,22 @@
   align-items: center;
   z-index: 10;
   background-color: $hover-background-color;
+}
+
+@media (max-width: 630px) {
+  .wrapper {
+    height: 2012px;
+  }
+
+  .sets {
+    flex-direction: column;
+  }
+
+  .items {
+    flex-direction: column;
+  }
+
+  .outs-link {
+    margin-bottom: 6px;
+  }
 }

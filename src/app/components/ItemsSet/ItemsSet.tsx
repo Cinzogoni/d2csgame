@@ -61,16 +61,6 @@ function ItemsSet() {
       </div>
 
       <div className={cx("sets")}>
-        <div className={cx("bundle")}>
-          <div className={cx("item-viewAll")}>
-            <h4 className={cx("title")}>{t("setForSale")}</h4>
-            <Link href="/" className={cx("viewAll-link")}>
-              <h4 className={cx("action")}>Xem tất cả</h4>
-              <FaAngleRight className={cx("icon")} />
-            </Link>
-          </div>
-        </div>
-
         <div className={cx("outstanding")}>
           <h4 className={cx("title")}>{t("highlightSet")}</h4>
           <div className={cx("frame")}>
@@ -83,6 +73,16 @@ function ItemsSet() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+
+        <div className={cx("bundle")}>
+          <div className={cx("item-viewAll")}>
+            <h4 className={cx("title")}>{t("setForSale")}</h4>
+            <Link href="/" className={cx("viewAll-link")}>
+              <h4 className={cx("action")}>Xem tất cả</h4>
+              <FaAngleRight className={cx("icon")} />
+            </Link>
           </div>
         </div>
       </div>
