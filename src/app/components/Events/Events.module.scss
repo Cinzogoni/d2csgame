@@ -1,0 +1,20 @@
+@use "@styles/variable.scss" as *;
+
+.wrapper {
+  width: 100%;
+  height: 500px;
+  max-width: calc(100% - 24px);
+  margin: 0 auto;
+  padding: 30px;
+  background-color: $frame-background-color;
+  border-radius: $frame-corner-radius;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  background-color: $element-background-color;
+  clip-path: $banners-corner-frame;
+  border-top-right-radius: $frame-corner-radius;
+  border-bottom-left-radius: $frame-corner-radius;
+}

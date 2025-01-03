@@ -2,6 +2,9 @@
 
 html,
 body {
+  width: 100vw;
+  height: 100vh;
+  min-width: 280px;
   font-family: $main-text-font;
   color: $primary-text-color;
   font-size: 62.5%;
@@ -25,6 +28,24 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: lighten;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-color;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $frame-background-color;
+    border-radius: 50px;
+  }
 }
 
 * {

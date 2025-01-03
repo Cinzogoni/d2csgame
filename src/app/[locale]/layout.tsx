@@ -51,7 +51,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <div className={cx("container")}>
+          <div className={cx("wrapper")}>
             <Header />
             {children}
           </div>
